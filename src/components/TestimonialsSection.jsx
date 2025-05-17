@@ -1,15 +1,7 @@
 import React, { useState } from 'react';
 
-interface Testimonial {
-  id: number;
-  text: string;
-  author: string;
-  image: string;
-  position?: string;
-}
-
-const TestimonialsSection: React.FC = () => {
-  const testimonials: Testimonial[] = [
+const TestimonialsSection = () => {
+  const testimonials = [
     {
       id: 1,
       text: "Michael's analytical approach to market psychology was exactly what I needed. I've reduced my emotional trading and increased my win rate by 30% in just three months.",

@@ -10,7 +10,7 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import FaqSection from '../components/FaqSection';
 import ContactSection from '../components/ContactSection';
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
   return (
     <div>
       <HeroCarousel />

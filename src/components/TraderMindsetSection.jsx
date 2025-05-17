@@ -1,7 +1,7 @@
 import React from 'react';
 import { AlertCircle, CheckCircle2 } from 'lucide-react';
 
-const TraderMindsetSection: React.FC = () => {
+const TraderMindsetSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">

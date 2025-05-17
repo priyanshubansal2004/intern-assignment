@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Twitter, Linkedin, Youtube, Instagram } from 'lucide-react';
 
-const ContactSection: React.FC = () => {
+const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -9,16 +9,16 @@ const ContactSection: React.FC = () => {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     // Here you would typically send the data to your server
-    
+
     // Reset form
     setFormData({
       name: '',
@@ -26,7 +26,7 @@ const ContactSection: React.FC = () => {
       subject: '',
       message: ''
     });
-    
+
     // Show success message
     alert('Message sent successfully!');
   };

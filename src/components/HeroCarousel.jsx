@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-interface CarouselItem {
-  title: string;
-  subtitle: string;
-  quote: string;
-  author: string;
-  imageUrl?: string;
-}
-
-const HeroCarousel: React.FC = () => {
-  const carouselItems: CarouselItem[] = [
+const HeroCarousel = () => {
+  const carouselItems = [
     {
       title: 'TRADE LESS,',
       subtitle: 'TRADE SIMPLE',
@@ -20,7 +12,7 @@ const HeroCarousel: React.FC = () => {
     {
       title: 'DISCIPLINE OVER',
       subtitle: 'EMOTIONS',
-      quote: 'The market doesn\'t care how you feel. It\'s going to keep doing what it\'s doing regardless of your emotional state.',
+      quote: "The market doesn't care how you feel. It's going to keep doing what it's doing regardless of your emotional state.",
       author: 'Mark Douglas',
     },
     {
@@ -45,7 +37,7 @@ const HeroCarousel: React.FC = () => {
     );
   };
 
-  const goToSlide = (index: number) => {
+  const goToSlide = (index) => {
     setCurrentIndex(index);
   };
 

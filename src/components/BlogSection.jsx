@@ -2,26 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, User } from 'lucide-react';
 
-interface BlogCardProps {
-  image: string;
-  title: string;
-  excerpt: string;
-  author?: string;
-  authorImage?: string;
-  date: string;
-  readTime: string;
-  link: string;
-  isFeature?: boolean;
-}
-
-const BlogCard: React.FC<BlogCardProps> = ({ 
-  image, 
-  title, 
-  excerpt, 
-  author, 
-  authorImage, 
-  date, 
-  readTime, 
+const BlogCard = ({
+  image,
+  title,
+  excerpt,
+  author,
+  authorImage,
+  date,
+  readTime,
   link,
   isFeature = false
 }) => {
@@ -96,7 +84,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   );
 };
 
-const BlogSection: React.FC = () => {
+const BlogSection = () => {
   const featuredPost = {
     image: "https://images.pexels.com/photos/7567437/pexels-photo-7567437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "The Engineering Approach to Market Analysis: A Systematic Trading Framework",
@@ -147,7 +135,7 @@ const BlogSection: React.FC = () => {
               author={featuredPost.author}
               date={featuredPost.date}
               readTime={featuredPost.readTime}
-              link='/'
+              link={featuredPost.link}
               isFeature={true}
             />
           </div>

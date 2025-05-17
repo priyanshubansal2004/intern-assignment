@@ -2,14 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-interface ResourceCardProps {
-  image: string;
-  title: string;
-  description: string;
-  link: string;
-}
-
-const ResourceCard: React.FC<ResourceCardProps> = ({ image, title, description, link }) => {
+const ResourceCard = ({ image, title, description, link }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
       <img 
@@ -31,7 +24,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ image, title, description, 
   );
 };
 
-const ResourcesSection: React.FC = () => {
+const ResourcesSection = () => {
   const resources = [
     {
       image: "https://images.pexels.com/photos/6801654/pexels-photo-6801654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -90,7 +83,7 @@ const ResourcesSection: React.FC = () => {
               image={resource.image}
               title={resource.title}
               description={resource.description}
-              link='/'
+              link={resource.link}
             />
           ))}
         </div>

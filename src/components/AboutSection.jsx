@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutSection: React.FC = () => {
+const AboutSection = () => {
   return (
     <section className="py-16 bg-[#1e5245] text-white">
       <div className="container mx-auto px-4">
@@ -11,7 +11,7 @@ const AboutSection: React.FC = () => {
         <div className="max-w-4xl mx-auto bg-[#2a6354]/70 rounded-lg p-8 md:p-10 shadow-lg">
           <ul className="space-y-6 list-disc pl-6 text-white/90">
             <li className="text-lg">
-              I'm a stock market trader who comes from an engineering background. Like most beginners, I went through the usual path—mentors, trading books, weekend courses. But after all that, one truth stood out:
+              I'm a stock market trader who comes from an engineering background. Like most beginners, I went through the usual path-mentors, trading books, weekend courses. But after all that, one truth stood out:
             </li>
             
             <li className="text-lg">
@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
             </li>
             
             <li className="text-lg">
-              I still remember my first trade—hands trembling as I hit 'buy', heart racing as I watched the P&L tick up and down.
+              I still remember my first trade-hands trembling as I hit 'buy', heart racing as I watched the P&L tick up and down.
               Everyone goes through that stage...
             </li>
             

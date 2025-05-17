@@ -1,15 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-interface PatternCardProps {
-  image: string;
-  title: string;
-  description: string;
-  successRate: string;
-  link: string;
-}
-
-const PatternCard: React.FC<PatternCardProps> = ({ image, title, description, successRate, link }) => {
+const PatternCard = ({ image, title, description, successRate, link }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
       <img 
@@ -34,7 +26,7 @@ const PatternCard: React.FC<PatternCardProps> = ({ image, title, description, su
   );
 };
 
-const TradingRecapSection: React.FC = () => {
+const TradingRecapSection = () => {
   const patterns = [
     {
       image: "https://images.pexels.com/photos/6771985/pexels-photo-6771985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

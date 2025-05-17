@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
 
-interface FaqItem {
-  question: string;
-  answer: string;
-}
-
-const FaqSection: React.FC = () => {
-  const faqs: FaqItem[] = [
+const FaqSection = () => {
+  const faqs = [
     {
       question: "What makes your trading approach different?",
       answer: "My approach combines engineering principles with market psychology. I focus on simplicity, clear rules, and risk management rather than complex indicators or 'secret formulas.' I believe in sustainable, consistent results over flashy short-term gains. My background in engineering enables me to build and test systematic approaches to trading that remove much of the emotional bias."
@@ -22,10 +17,10 @@ const FaqSection: React.FC = () => {
     },
   ];
 
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? null : null);
+  const toggleFaq = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
